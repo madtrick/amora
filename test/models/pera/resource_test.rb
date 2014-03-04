@@ -15,4 +15,13 @@ describe PERA::Resource do
 
     resource.must_respond_to :self_link
   end
+
+  describe "#fetched_properties" do
+    it "returns the names of the properties fetched for this resource" do
+      hal_resource = stub(links: [], properties: {p1: 1, p2: 2})
+      resource = PERA::Resource.new(api, hal_resource)
+
+      resource.fetched_properties.must_equal({p1: 1, p2: 2})
+    end
+  end
 end

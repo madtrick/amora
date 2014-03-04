@@ -6,6 +6,10 @@ class PERA::Resource
     generate_readers_for_links @hal_resource.links
   end
 
+  def fetched_properties
+    @hal_resource.properties
+  end
+
   private
   def generate_readers_for_links(links)
     self.class.class_eval do
