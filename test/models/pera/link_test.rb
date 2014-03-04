@@ -1,7 +1,7 @@
 require "test_helper"
 
 describe PERA::Link do
-  let(:api) { API.new "http://localhost" }
+  let(:api) { PERA::API.new "http://localhost" }
   let(:pera_hal_link) { PERA::HAL::Link.new("resource", "/resource") }
 
   describe "#url" do
