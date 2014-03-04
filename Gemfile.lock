@@ -25,6 +25,8 @@ GEM
       multi_json (~> 1.3)
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
+    addressable (2.3.5)
+    ansi (1.4.3)
     arel (4.0.2)
     atomic (1.1.14)
     builder (3.1.4)
@@ -41,12 +43,16 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
+    crack (0.4.2)
+      safe_yaml (~> 1.0.0)
     em-websocket (0.5.0)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.5.3)
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (2.0.2)
+    faraday (0.9.0)
+      multipart-post (>= 1.2, < 3)
     ffi (1.9.3)
     formatador (0.2.4)
     guard (2.4.0)
@@ -59,8 +65,16 @@ GEM
       em-websocket (~> 0.5)
       guard (~> 2.0)
       multi_json (~> 1.8)
+    guard-minitest (2.2.0)
+      guard (~> 2.0)
+      minitest (>= 3.0)
+    hashie (2.0.5)
     hike (1.2.3)
     http_parser.rb (0.5.3)
+    hyperresource (0.2.1)
+      faraday (>= 0.8.6)
+      json
+      uri_template (>= 0.5.2)
     i18n (0.6.9)
     jquery-rails (3.1.0)
       railties (>= 3.0, < 5.0)
@@ -75,12 +89,27 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    metaclass (0.0.4)
     method_source (0.8.2)
     mime-types (1.25.1)
     minitest (4.7.5)
+    minitest-reporters (0.14.24)
+      ansi
+      builder
+      minitest (>= 2.12, < 5.0)
+      powerbar
+    minitest-spec-rails (4.7.6)
+      minitest (~> 4.7)
+      rails (>= 3.0, < 4.1)
+    mocha (1.0.0)
+      metaclass (~> 0.0.1)
     multi_json (1.8.4)
+    multipart-post (2.0.0)
     nio4r (1.0.0)
     polyglot (0.3.3)
+    powerbar (1.0.11)
+      ansi (~> 1.4.0)
+      hashie (>= 1.1.0)
     pry (0.9.12.6)
       coderay (~> 1.0)
       method_source (~> 0.8)
@@ -107,12 +136,14 @@ GEM
     rb-fsevent (0.9.4)
     rb-inotify (0.9.3)
       ffi (>= 0.5.0)
+    safe_yaml (1.0.1)
     sass (3.2.14)
     sass-rails (4.0.1)
       railties (>= 4.0.0, < 5.0)
       sass (>= 3.1.10)
       sprockets-rails (~> 2.0.0)
     slop (3.4.7)
+    spring (1.1.1)
     sprockets (2.10.1)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -123,6 +154,7 @@ GEM
       activesupport (>= 3.0)
       sprockets (~> 2.8)
     sqlite3 (1.3.8)
+    sugarfree-config (2.0.0)
     thor (0.18.1)
     thread_safe (0.1.3)
       atomic
@@ -137,6 +169,11 @@ GEM
     uglifier (2.4.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    uri_template (0.6.0)
+    vcr (2.8.0)
+    webmock (1.17.3)
+      addressable (>= 2.2.7)
+      crack (>= 0.3.2)
 
 PLATFORMS
   ruby
@@ -144,10 +181,19 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
   guard-livereload
+  guard-minitest
+  hyperresource
   jquery-rails
+  minitest-reporters
+  minitest-spec-rails
+  mocha
   rack-livereload
   rails (= 4.0.2)
   sass-rails (~> 4.0.0)
+  spring
   sqlite3
+  sugarfree-config
   turbolinks
   uglifier (>= 1.3.0)
+  vcr
+  webmock
