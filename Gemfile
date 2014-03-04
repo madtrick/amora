@@ -10,6 +10,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'hyperresource'
 gem 'sugarfree-config'
+gem 'bootstrap-sass'
 
 group :development do
   gem 'sass-rails', '~> 4.0.0'

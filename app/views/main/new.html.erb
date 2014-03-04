@@ -1,4 +1,11 @@
-<%= form_tag do %>
-  <%= text_field_tag 'api-root-url' %>
-  <%= button_tag t(:go), 'data-behaviour' => 'trigger-get-api-root-url' %>
-<% end %>
+<div class="row">
+  <div class="col-md-12">
+    <%= form_tag do %>
+      <div class="form-group">
+        <%= label_tag 'api-root-url', 'Root url of PERA'%>
+        <%= text_field_tag 'api-root-url', nil, class: 'form-control' %>
+      </div>
+      <%= button_tag t(:go), 'data-behaviour' => 'trigger-get-api-root-url', class: 'btn btn-primary'%>
+    <% end %>
+  </div>
+</div>
