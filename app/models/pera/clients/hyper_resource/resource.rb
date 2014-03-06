@@ -2,7 +2,7 @@ class PERA::Clients::HyperResource::Resource
   def translate(hyperresource)
     PERA::HAL::Builders::Resource.new.build(
       translate_links(hyperresource),
-      [],
+      translate_embedded(hyperresource),
       translate_attributes(hyperresource)
     )
   end
@@ -17,5 +17,9 @@ class PERA::Clients::HyperResource::Resource
 
   def translate_attributes(hyperresource)
     hyperresource.attributes
+  end
+
+  def translate_embedded(hyperresource)
+    Hash[hyperresource.objects.map {|rel, e_resources| [rel, e_resources.map {|e_resource| translate e_resource}]}]
   end
 end

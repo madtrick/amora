@@ -1,0 +1,5 @@
+class Resources::SystemController < ApplicationController
+  def index
+    @resource = Resources::System::Index.new.run(params)
+  end
+end

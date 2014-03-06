@@ -1,0 +1,16 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th><%= t('property') %></th>
+      <th><%= t('value') %></th>
+    </tr>
+  </thead>
+  <tbody>
+<% @resource.fetched_properties.each do |name, value| %>
+  <tr>
+    <td><%= name %></td>
+    <td><%= value %></td>
+  </tr>
+<% end %>
+  </tbody>
+</table>
