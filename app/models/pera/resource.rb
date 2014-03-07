@@ -1,4 +1,8 @@
 class PERA::Resource
+  include Draper::Decoratable
+
+  attr_reader :api
+
   def initialize(api, pera_hal_resource)
     @api          = api
     @hal_resource = pera_hal_resource
@@ -12,6 +16,16 @@ class PERA::Resource
 
   def fetched_embededd
     Hash[@hal_resource.embedded.map {|rel, embedded| [rel, embedded.map {|embedded| self.class.new(@api, embedded)}]}]
+  end
+
+  # Workaround to force a default decorator for all
+  # resources
+  def decorate
+    begin
+      super
+    rescue Draper::UninferrableDecoratorError
+      PERA::ResourceDecorator.decorate self
+    end
   end
 
   private

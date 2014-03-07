@@ -11,6 +11,7 @@ gem 'turbolinks'
 gem 'hyperresource'
 gem 'sugarfree-config'
 gem 'bootstrap-sass'
+gem 'draper'
 
 group :development do
   gem 'sass-rails', '~> 4.0.0'
