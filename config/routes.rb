@@ -8,5 +8,6 @@ Amora::Application.routes.draw do
      get 'system', to: 'system#index'
      get 'processes', to: 'processes#index'
      get 'process', to: 'process#index'
+     get 'modules', to: 'modules#index'
    end
 end
