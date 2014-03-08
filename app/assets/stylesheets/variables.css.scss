@@ -1,0 +1,16 @@
+@import 'bootstrap/variables';
+
+// Colors from colourlovers
+// palette: http://www.colourlovers.com/palette/131576/Maddening_Caravan
+$yellow           : #FAD089;
+$orange           : #FF9C5B;
+$saturated-orange : #F5634A;
+$red              : #ED303C;
+$blue             : #3B8183;
+
+$body-bg : #FAD089;
+
+$link-color : #F5634A;
+$link-hover-color : darken($link-color, 15%);
+
+$content-wrapper-bg : desaturate(lighten(#FAD089, 21), 1);

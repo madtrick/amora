@@ -61,6 +61,8 @@ GEM
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.3)
+    font-awesome-rails (4.0.3.1)
+      railties (>= 3.2, < 5.0)
     formatador (0.2.4)
     guard (2.4.0)
       formatador (>= 0.2.4)
@@ -190,6 +192,7 @@ DEPENDENCIES
   bootstrap-sass
   coffee-rails (~> 4.0.0)
   draper
+  font-awesome-rails
   guard-livereload
   guard-minitest
   hyperresource

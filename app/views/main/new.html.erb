@@ -1,11 +1,13 @@
 <div class="row">
-  <div class="col-md-12">
-    <%= form_tag do %>
-      <div class="form-group">
-        <%= label_tag 'api-root-url', 'Root url of PERA'%>
-        <%= text_field_tag 'api-root-url', nil, class: 'form-control' %>
-      </div>
-      <%= button_tag t(:go), 'data-behaviour' => 'trigger-get-api-root-url', class: 'btn btn-primary'%>
-    <% end %>
+  <div class="amora-content col-md-6 col-md-offset-3">
+    <div class="amora-pera-root">
+      <%= form_tag do %>
+        <div class="form-group">
+          <%= label_tag 'api-root-url', t('pera.root-url')%>
+          <%= text_field_tag 'api-root-url', nil, class: 'form-control' %>
+        </div>
+        <%= button_tag t(:go), 'data-behaviour' => 'trigger-get-api-root-url', class: 'btn btn-primary'%>
+      <% end %>
+    </div>
   </div>
 </div>

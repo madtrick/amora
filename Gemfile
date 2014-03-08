@@ -12,6 +12,7 @@ gem 'hyperresource'
 gem 'sugarfree-config'
 gem 'bootstrap-sass'
 gem 'draper'
+gem 'font-awesome-rails'
 
 group :development do
   gem 'sass-rails', '~> 4.0.0'

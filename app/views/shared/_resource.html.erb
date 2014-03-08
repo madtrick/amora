@@ -12,25 +12,6 @@
   </div>
   <div class="amora-content col-md-10">
     <h2><%= @resource.name %></h2>
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th><%= t('pid') %></th>
-          <th><%= t('details') %></th>
-        </tr>
-      </thead>
-      <tbody>
-      <% @resource.fetched_embededd.each do |name, embeddeds| %>
-        <% embeddeds.each do |embedded| %>
-        <tr>
-          <td><%= embedded.pid %></td>
-          <td><%= link_to t('more_info'), resources_process_path(url: embedded.self_link.url ) %></td>
-        </tr>
-        <% end %>
-      <% end %>
-      </tbody>
-    </table>
     <%= render "shared/properties" %>
   </div>
 </div>
-

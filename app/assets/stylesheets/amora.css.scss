@@ -1,0 +1,45 @@
+@import 'variables';
+
+body {
+  background-color : $body-bg;
+}
+
+a {
+  color : $link-color !important;
+
+  &:hover {
+    color : $link-hover-color !important;
+  }
+}
+
+.top-bar {
+  background-color : $red;
+  width            : 100%;
+  height           : 7px;
+}
+
+.container {
+  margin-top : 40px;
+}
+
+.amora-logo {
+  font-size  : 40px;
+  text-align : right;
+  /*color : lighten($blue, 20);*/
+  /*color : saturate($yellow, 10);*/
+  color : $red;
+}
+.amora-menu {
+  li a {
+    list-style-type : none;
+    font-size : 20px;
+  }
+}
+
+.amora-content {
+  background-color : $content-wrapper-bg;
+}
+
+.amora-pera-root {
+  margin : 20px 0 20px 0;
+}
