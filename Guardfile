@@ -1,4 +1,5 @@
-guard 'livereload' do
+# Have to use the same port configured in config/environments/development.rb
+guard 'livereload', port: 35730 do
   watch(%r{app/views/.+\.(erb|haml|slim)$})
   watch(%r{app/helpers/.+\.rb})
   watch(%r{public/.+\.(css|js|html)})

@@ -24,5 +24,8 @@ Amora::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
-  config.middleware.use Rack::LiveReload
+  # Have to change the default port because otherwise it will clash with
+  # Grunt (I can't find a way to set a differente port for livereload on
+  # Gruntfile)
+  config.middleware.use Rack::LiveReload, live_reload_port: 35730
 end
