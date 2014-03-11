@@ -13,6 +13,7 @@ gem 'sugarfree-config'
 gem 'bootstrap-sass'
 gem 'draper'
 gem 'font-awesome-rails'
+gem 'active_model_serializers'
 
 group :development do
   gem 'sass-rails', '~> 4.0.0'

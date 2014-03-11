@@ -1,5 +1,6 @@
 class PERA::Resource
-  include Draper::Decoratable
+  include PERA::Serialization
+  include PERA::Decoration
 
   attr_reader :api
 
@@ -18,15 +19,6 @@ class PERA::Resource
     Hash[@hal_resource.embedded.map {|rel, embedded| [rel, embedded.map {|embedded| self.class.new(@api, embedded)}]}]
   end
 
-  # Workaround to force a default decorator for all
-  # resources
-  def decorate
-    begin
-      super
-    rescue Draper::UninferrableDecoratorError
-      PERA::ResourceDecorator.decorate self
-    end
-  end
 
   private
   def generate_readers_for_links
