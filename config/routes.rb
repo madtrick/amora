@@ -10,4 +10,8 @@ Amora::Application.routes.draw do
      get 'process', to: 'process#index'
      get 'modules', to: 'modules#index'
    end
+
+   namespace :api do
+     get 'memory', to: 'memory#index'
+   end
 end
