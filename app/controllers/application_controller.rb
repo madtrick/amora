@@ -1,4 +1,4 @@
-require 'pera/clients/errors'
+require_dependency 'pera/clients/errors'
 
 class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
