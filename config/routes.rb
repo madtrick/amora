@@ -12,6 +12,7 @@ Amora::Application.routes.draw do
    end
 
    namespace :api do
+     get 'meta', to: 'meta#index'
      get 'memory', to: 'memory#index'
    end
 end
